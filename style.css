@@ -1,0 +1,99 @@
+:root {
+    --primary: #4f46e5;
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #1f2937;
+    --low: #22c55e;
+    --medium: #eab308;
+    --high: #ef4444;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    background: var(--card);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 24px; }
+header h1 span { color: var(--primary); font-weight: 800; }
+header p { font-size: 12px; color: #6b7280; margin-bottom: 25px; }
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+}
+
+input { flex: 1; }
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover { opacity: 0.8; }
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #6b7280;
+}
+
+.btn-clear {
+    background: transparent;
+    color: var(--high);
+    padding: 0;
+}
+
+.task-item {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid transparent;
+    transition: 0.3s;
+}
+
+/* Cores de prioridade */
+.prio-Baixa { border-left-color: var(--low); }
+.prio-Média { border-left-color: var(--medium); }
+.prio-Alta { border-left-color: var(--high); }
+
+.task-item.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.actions { display: flex; gap: 5px; }
+.btn-del { background: #fee2e2; color: var(--high); }

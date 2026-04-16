@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tarefas Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Minha Lista <span>DB</span></h1>
+            <p>Dados salvos automaticamente no navegador</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="O que precisa ser feito?">
+                <select id="priorityInput">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+                <button onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+
+            <div class="filters">
+                <span id="counter">0 tarefas no banco</span>
+                <button class="btn-clear" onclick="limparBanco()">Limpar Tudo</button>
+            </div>
+
+            <ul id="taskList">
+                </ul>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
